@@ -9,8 +9,8 @@ public:
     //destructor
     ~Graph();
 
-    //Return the number of verticies
-    int get_verticies_count() const { return verticies_count; }
+    //Return the number of vertices
+    int get_vertices_count() const { return verticies_count; }
 
     //return the weight between a source & destination
     //Weight of 0.0 means no edge
@@ -20,7 +20,7 @@ private:
     int verticies_count;
     bool directed;
 
-    //2-D matrix showing edges from vertieices_count verticies to verticies_count verticies
+    //2-D matrix showing edges from vertices_count vertices to vertices_count vertices
     double** edges;
 };
 

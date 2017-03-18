@@ -22,7 +22,7 @@ int* initBackTrack(int size) {
 }
 
 int* createBackTrackFromNode(const Graph *graph, int source) {
-    int graphSize = graph->get_verticies_count(); //Number of verticiies
+    int graphSize = graph->get_vertices_count(); //Number of verticiies
     bool* visited = initVisited(graphSize);
     int* backTrack = initBackTrack(graphSize);
 
@@ -61,8 +61,8 @@ stack<int>* breathFirstSearch(const Graph *graph, int source, int destination) {
 
 
 double* initialiseDistances(Graph* graph, int source) {
-    double* initialDistances = new double[graph->get_verticies_count()];
-    for (int i = 0; i < graph->get_verticies_count(); i++) {
+    double* initialDistances = new double[graph->get_vertices_count()];
+    for (int i = 0; i < graph->get_vertices_count(); i++) {
         double distanceFromSource = graph->get_edge(source, i);
         initialDistances[i] = (distanceFromSource > 0.f) ?
                               distanceFromSource : DBL_MAX;
@@ -85,7 +85,7 @@ int* initialiseDijkstraBackTrack(int graphSize, int source) {
 }
 
 int* dijkstraBackTrack(Graph* graph, int source) {
-    int graphSize = graph->get_verticies_count();
+    int graphSize = graph->get_vertices_count();
     set<int>* nodeSortingSet = initSortingSet(graphSize, source);
 
     double* nodeDistances = initialiseDistances(graph, source);
